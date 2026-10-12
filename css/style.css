@@ -1,0 +1,214 @@
+/* =========================================================
+   Farrel UMKM Store - style.css
+   Ubah warna di bagian :root di bawah ini.
+   ========================================================= */
+
+:root {
+  --hijau: #1f4d36;        /* forest green */
+  --hijau-tua: #153625;
+  --krem: #faf5e9;         /* cream */
+  --krem-tua: #f0e8d2;
+  --terakota: #b5553a;     /* soft terracotta (kontras baik dgn teks putih) */
+  --terakota-tua: #96432c;
+  --teks: #2b2b26;
+  --teks-lembut: #5a5a50;
+  --putih: #ffffff;
+  --radius: 14px;
+  --bayangan: 0 4px 16px rgba(31, 77, 54, 0.1);
+  --lebar: 1100px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--teks);
+  background: var(--krem);
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--hijau); }
+
+.container { width: min(var(--lebar), 92%); margin: 0 auto; }
+.section { padding: 72px 0; }
+.section-alt { background: var(--krem-tua); }
+
+h1, h2, h3 { line-height: 1.25; color: var(--hijau-tua); }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom: 12px; }
+h3 { font-size: 1.2rem; margin-bottom: 6px; }
+
+.section-head { text-align: center; max-width: 620px; margin: 0 auto 40px; }
+.section-head p { color: var(--teks-lembut); }
+
+/* Aksesibilitas: fokus keyboard terlihat jelas */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--terakota);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 8px;
+  background: var(--putih); padding: 8px 14px; border-radius: 8px; z-index: 100;
+}
+.skip-link:focus { left: 8px; }
+
+/* ---------- Navigasi ---------- */
+.site-header {
+  background: var(--hijau);
+  position: sticky; top: 0; z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 68px;
+}
+.brand {
+  color: var(--krem); font-weight: 700; font-size: 1.25rem;
+  text-decoration: none; letter-spacing: 0.3px;
+}
+.brand span { color: #f0b9a5; }
+.nav-links { list-style: none; display: flex; gap: 6px; }
+.nav-links a {
+  color: var(--krem); text-decoration: none;
+  padding: 8px 14px; border-radius: 8px; font-weight: 500;
+  transition: background 0.2s;
+}
+.nav-links a:hover { background: rgba(255, 255, 255, 0.15); }
+.nav-links a.active { background: var(--krem); color: var(--hijau-tua); }
+
+.menu-toggle {
+  display: none; background: none; border: 2px solid var(--krem);
+  color: var(--krem); font-size: 1.3rem; border-radius: 8px;
+  padding: 4px 12px; cursor: pointer;
+}
+
+/* ---------- Tombol ---------- */
+.btn {
+  display: inline-block; padding: 13px 28px; border-radius: 999px;
+  font-weight: 600; font-size: 1rem; text-decoration: none;
+  border: 2px solid transparent; cursor: pointer;
+  transition: background 0.2s, transform 0.2s, color 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--terakota); color: var(--putih); }
+.btn-primary:hover { background: var(--terakota-tua); }
+.btn-secondary { background: transparent; color: var(--hijau); border-color: var(--hijau); }
+.btn-secondary:hover { background: var(--hijau); color: var(--krem); }
+.btn-wa { background: #1f7a4d; color: var(--putih); }
+.btn-wa:hover { background: var(--hijau-tua); }
+.btn-block { display: block; text-align: center; width: 100%; }
+
+/* ---------- Hero ---------- */
+.hero { padding: 80px 0; background: var(--krem); }
+.hero-inner {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center;
+}
+.eyebrow {
+  display: inline-block; color: var(--terakota-tua); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8rem; margin-bottom: 14px;
+}
+.hero p { color: var(--teks-lembut); font-size: 1.1rem; margin: 18px 0 30px; max-width: 520px; }
+.hero-img img { border-radius: 24px; box-shadow: var(--bayangan); width: 100%; }
+
+/* ---------- Kartu produk ---------- */
+.grid {
+  display: grid; gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.card {
+  background: var(--putih); border-radius: var(--radius);
+  box-shadow: var(--bayangan); overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 26px rgba(31, 77, 54, 0.18); }
+.card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--krem-tua); }
+.card-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.card-body p { color: var(--teks-lembut); font-size: 0.98rem; margin-bottom: 14px; }
+.price { color: var(--terakota-tua); font-weight: 700; font-size: 1.3rem; margin-bottom: 8px; }
+.card-body .btn { margin-top: auto; }
+.badge {
+  display: inline-block; background: var(--krem-tua); color: var(--hijau-tua);
+  font-size: 0.8rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.center { text-align: center; margin-top: 36px; }
+
+.note {
+  background: #fff3df; border-left: 5px solid var(--terakota);
+  padding: 14px 18px; border-radius: 8px; margin-bottom: 36px; font-size: 0.97rem;
+}
+
+/* ---------- Promo ---------- */
+.promo {
+  background: var(--hijau); color: var(--krem); text-align: center;
+  border-radius: 24px; padding: 56px 28px;
+}
+.promo h2 { color: var(--krem); }
+.promo p { max-width: 640px; margin: 0 auto 26px; color: #e6eadf; }
+.promo .btn-primary { background: var(--terakota); }
+
+/* ---------- Halaman umum ---------- */
+.page-title { background: var(--krem-tua); padding: 56px 0 44px; text-align: center; }
+.page-title p { color: var(--teks-lembut); max-width: 600px; margin: 10px auto 0; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+
+.steps { list-style: none; counter-reset: langkah; margin-top: 14px; }
+.steps li {
+  counter-increment: langkah; position: relative;
+  padding: 0 0 18px 54px;
+}
+.steps li::before {
+  content: counter(langkah); position: absolute; left: 0; top: 0;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--terakota); color: var(--putih);
+  display: grid; place-items: center; font-weight: 700;
+}
+
+.info-box {
+  background: var(--putih); border-radius: var(--radius);
+  box-shadow: var(--bayangan); padding: 28px;
+}
+.info-box dl { margin: 14px 0 22px; }
+.info-box dt { font-weight: 700; color: var(--hijau-tua); margin-top: 12px; }
+.info-box dd { color: var(--teks-lembut); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--hijau-tua); color: #dfe5d8; padding: 48px 0 24px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+.site-footer h3 { color: var(--krem); font-size: 1.05rem; }
+.site-footer a { color: #f0b9a5; }
+.site-footer ul { list-style: none; }
+.copy {
+  text-align: center; margin-top: 32px; padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: 0.9rem;
+}
+
+/* ---------- Animasi sederhana (muncul halus) ---------- */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s, transform 0.6s; }
+.reveal.show { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 860px) {
+  .hero-inner, .two-col { grid-template-columns: 1fr; }
+  .hero { padding: 48px 0; }
+  .section { padding: 52px 0; }
+  .menu-toggle { display: block; }
+  .nav { flex-wrap: wrap; padding: 10px 0; }
+  .nav-links {
+    display: none; flex-direction: column; width: 100%; padding: 8px 0 10px;
+  }
+  .nav-links.open { display: flex; }
+}

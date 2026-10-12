@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Keripik singkong">
+  <rect width="400" height="300" fill="#e7efe3"/>
+  <ellipse cx="200" cy="235" rx="150" ry="22" fill="#c8d6c2"/>
+  <rect x="110" y="70" width="180" height="160" rx="14" fill="#1f4d36"/>
+  <rect x="110" y="70" width="180" height="30" rx="14" fill="#153625"/>
+  <rect x="130" y="115" width="140" height="90" rx="10" fill="#faf5e9"/>
+  <g fill="#e6c27a" stroke="#b98d3a" stroke-width="2">
+    <path d="M150 190 q12-40 40-30 q22 8 8 34 q-22 14 -48 -4z"/>
+    <path d="M205 160 q30-26 55 0 q8 28 -22 34 q-30 0 -33 -34z"/>
+  </g>
+  <text x="200" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#b5553a" font-weight="bold">KERIPIK</text>
+  <text x="200" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#1f4d36" font-weight="bold">Keripik Singkong</text>
+</svg>

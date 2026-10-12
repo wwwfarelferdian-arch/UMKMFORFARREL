@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Keranjang camilan lokal">
+  <rect width="600" height="450" fill="#e7efe3"/>
+  <circle cx="470" cy="90" r="60" fill="#f0b9a5" opacity="0.6"/>
+  <circle cx="100" cy="360" r="80" fill="#c8d6c2" opacity="0.7"/>
+  <path d="M170 210 Q300 60 430 210" fill="none" stroke="#96432c" stroke-width="12" stroke-linecap="round"/>
+  <path d="M120 210 H480 L440 370 Q300 400 160 370 Z" fill="#b5553a"/>
+  <g stroke="#96432c" stroke-width="5" opacity="0.7">
+    <path d="M135 255 H465"/><path d="M148 300 H452"/><path d="M158 345 H442"/>
+    <path d="M220 215 L205 375"/><path d="M300 215 V385"/><path d="M380 215 L395 375"/>
+  </g>
+  <g fill="#e9b84a" stroke="#c28a1e" stroke-width="3">
+    <circle cx="210" cy="200" r="34"/><circle cx="290" cy="185" r="36"/><circle cx="370" cy="202" r="32"/>
+  </g>
+  <g fill="#f6d77c">
+    <circle cx="210" cy="200" r="20"/><circle cx="290" cy="185" r="21"/><circle cx="370" cy="202" r="18"/>
+  </g>
+  <rect x="250" y="120" width="100" height="70" rx="8" fill="#1f4d36"/>
+  <rect x="262" y="136" width="76" height="38" rx="5" fill="#faf5e9"/>
+  <text x="300" y="161" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#b5553a">UMKM</text>
+</svg>

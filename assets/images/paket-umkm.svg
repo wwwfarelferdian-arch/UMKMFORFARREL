@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Paket UMKM">
+  <rect width="400" height="300" fill="#f6e3da"/>
+  <ellipse cx="200" cy="240" rx="160" ry="20" fill="#e6c9bb"/>
+  <rect x="80" y="110" width="240" height="120" rx="10" fill="#b5553a"/>
+  <rect x="70" y="90" width="260" height="36" rx="8" fill="#96432c"/>
+  <rect x="188" y="90" width="24" height="140" fill="#faf5e9"/>
+  <path d="M200 90 q-40 -50 -55 -20 q10 24 55 20z" fill="#faf5e9"/>
+  <path d="M200 90 q40 -50 55 -20 q-10 24 -55 20z" fill="#faf5e9"/>
+  <circle cx="200" cy="90" r="9" fill="#1f4d36"/>
+  <text x="200" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#1f4d36" font-weight="bold">Paket UMKM</text>
+</svg>
